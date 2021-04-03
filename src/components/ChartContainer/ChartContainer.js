@@ -11,14 +11,15 @@ import PropTypes from "prop-types";
 import "./ChartContainerStyles.css";
 
 const ChartContainer = ({ stockTicker }) => {
-  const chartInfo = useSelector(state => state.chartInfo.chartInfo);
+  const chartInfo = useSelector(state => state.stockInfo.chartInfo);
   const dispatch = useDispatch();
   const [typeOfChart, setTypeOfChart] = useState("line");
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
-    getChartInfo(stockTicker)(dispatch);
+    getChartInfo(stockTicker)(dispatch)
+    setIsLoading(false);
   }, [stockTicker, dispatch]);
 
   const handleChartChange = (e) => {

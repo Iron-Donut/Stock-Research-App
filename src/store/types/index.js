@@ -1,1 +1,2 @@
 export const GET_CHART_INFO = 'GET_CHART_INFO'; 
+export const GET_PROFILE_INFO = 'GET_PROFILE_INFO';
