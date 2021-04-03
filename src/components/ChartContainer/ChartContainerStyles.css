@@ -1,0 +1,15 @@
+.chart-container {
+  margin: auto;
+  width: 1000px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  border: 1px solid #cdcdd4;
+  border-radius: 13px;
+}
+
+.form-control {
+  margin-left: 10px
+}

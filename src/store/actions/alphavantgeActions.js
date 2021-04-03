@@ -1,6 +1,6 @@
 import { GET_CHART_INFO } from "../types";
 
-export const getFinancialInfo = (stockTicker) => async dispatch => {
+export const getChartInfo = (stockTicker) => async dispatch => {
   const API_KEY = '09SWB5UVOIWR7MJA';
 
   let financialChartXValuesFunction = [];
