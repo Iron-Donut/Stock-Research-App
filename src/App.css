@@ -1,4 +1,6 @@
-.App {
-  text-align: center;
-}
 
+.performance-metric-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 20px 0 40px;
+}

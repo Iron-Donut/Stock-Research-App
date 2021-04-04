@@ -5,9 +5,14 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  border: 1px solid #cdcdd4;
+  justify-content: flex-start;
+}
+
+.chart-display {
+  border: 1px solid hsl(240, 8%, 82%);
   border-radius: 13px;
+  overflow: hidden;
+
 }
 
 .form-control {

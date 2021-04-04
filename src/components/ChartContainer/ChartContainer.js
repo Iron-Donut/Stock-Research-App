@@ -40,7 +40,7 @@ const ChartContainer = ({ stockTicker }) => {
         <Loader />
       ) : (
         <>
-          <div>{chartInfo ? displayChart() : null}</div>
+          <div className="chart-display">{chartInfo ? displayChart() : null}</div>
           <div>
             {chartInfo ? (
               <div className="form-control">
