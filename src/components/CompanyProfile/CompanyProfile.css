@@ -1,0 +1,15 @@
+.profile-rows:nth-of-type(odd) {
+  background-color: rgb(245, 245, 245);
+  }
+
+  .profile-rows:hover {
+    cursor: pointer;
+  }
+
+  .profile-header-row {
+    background-color: #000000;
+  }
+
+  .definition-paragraph {
+    margin-top: 20px;
+  }
