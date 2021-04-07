@@ -13,7 +13,9 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    getCompanyOverview(stockTicker)(dispatch);
+    if (stockTicker) {
+      getCompanyOverview(stockTicker)(dispatch);
+    }
   },[stockTicker, dispatch]);
 
   return (

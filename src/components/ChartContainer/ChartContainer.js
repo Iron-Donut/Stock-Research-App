@@ -17,9 +17,11 @@ const ChartContainer = ({ stockTicker }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
-    getChartInfo(stockTicker)(dispatch)
-    setIsLoading(false);
+    if (stockTicker){
+      setIsLoading(true);
+      getChartInfo(stockTicker)(dispatch)
+      setIsLoading(false);
+    }
   }, [stockTicker, dispatch]);
 
   const handleChartChange = (e) => {
