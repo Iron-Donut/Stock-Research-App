@@ -40,8 +40,8 @@ function CompanyProfile() {
 
   const displayRows = () => {
     return (
-      ProfileDisplay.map(item => (
-        <TableRow className="profile-rows" onClick={() => handleModal(item)}>
+      ProfileDisplay.map((item, index) => (
+        <TableRow className="profile-rows" onClick={() => handleModal(item)} key={index}>
           <TableCell>{item.displayName}</TableCell>
           <TableCell style={{ width: "25%" }}>{displayValue(item)}</TableCell>
         </TableRow>
