@@ -1,0 +1,17 @@
+.search-bar-container {
+  display: flex;
+  background-color: #0f001d;
+  color: #ffffff;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.search-field {
+  display: contents
+}
+
+.search-input {
+  color: #ffffff;
+}
