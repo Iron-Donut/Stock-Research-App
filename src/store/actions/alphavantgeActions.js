@@ -1,7 +1,8 @@
 import { GET_CHART_INFO, GET_PROFILE_INFO } from "../types";
+const baseURL = 'https://www.alphavantage.co/query';
 const API_KEY = '09SWB5UVOIWR7MJA';
 
-export const getChartInfo = (stockTicker) => async dispatch => {
+export const getChartInfo = (stockTicker, outputsize = 'compact') => async dispatch => {
 
   let financialChartXValuesFunction = [];
   let financialChartCloseValuesFunction = [];
@@ -10,7 +11,7 @@ export const getChartInfo = (stockTicker) => async dispatch => {
   let financialChartLowValuesFunction = [];
 
   return await fetch(
-      `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${stockTicker}&outputsize=compact&apikey=${API_KEY}`
+      `${baseURL}?function=TIME_SERIES_DAILY&symbol=${stockTicker}&outputsize=${outputsize}&apikey=${API_KEY}`
     )
       .then((response) => {
         if(!response.ok) {
@@ -46,7 +47,7 @@ export const getChartInfo = (stockTicker) => async dispatch => {
 
 export const getCompanyOverview = (stockTicker) => async dispatch => {
   return fetch(
-    `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${stockTicker}&apikey=${API_KEY}`
+    `${baseURL}?function=OVERVIEW&symbol=${stockTicker}&apikey=${API_KEY}`
   )
     .then((response) => {
       if(!response.ok) {
@@ -56,6 +57,7 @@ export const getCompanyOverview = (stockTicker) => async dispatch => {
       return response.json();
     })
     .then((data)=> {
+
       dispatch({
         type: GET_PROFILE_INFO,
         payload: data,

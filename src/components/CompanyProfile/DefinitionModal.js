@@ -43,9 +43,9 @@ export default function DefinitionModal({ open, setOpen, info}) {
   const body = (
     <div style={modalStyle} className={classes.paper}>
       <h2 id="simple-modal-title">{info.displayName}</h2>
-      <p id="simple-modal-description">
+      <div id="simple-modal-description">
         {info.definition.replace(/\n+/g, '\n').split('\n').map(paragraph => <div className="definition-paragraph">{paragraph}</div>)}
-      </p>
+      </div>
       <Button className={classes.button} color='primary' variant="contained" onClick={handleClose}>Close</Button>
     </div>
   );
